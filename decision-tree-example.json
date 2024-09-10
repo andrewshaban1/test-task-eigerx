@@ -1,0 +1,43 @@
+{
+  "decisionTree": [
+    {
+      "type": "condition",
+      "expression": "(() => true)()",
+      "trueAction": {
+        "type": "sendSMS",
+        "phoneNumber": "+995591 Condition True"
+      },
+      "falseAction": {
+        "type": "sendEmail",
+        "sender": "sender@falseaction.com",
+        "receiver": "recevier@falseaction.com"
+      }
+    },
+    {
+      "type": "sendEmail",
+      "sender": "sender@gmail.com",
+      "receiver": "recevier@gmail.com"
+    },
+    {
+      "type": "sendSMS",
+      "phoneNumber": "+995591234"
+    },
+    {
+      "type": "sendEmail",
+      "sender": "sender@gmail.com",
+      "receiver": "recevier@gmail.com"
+    },
+    {
+      "type": "loop",
+      "subtree": {
+        "type": "condition",
+        "expression": "(() => true)()",
+        "trueAction": {
+          "type": "sendSMS",
+          "phoneNumber": "+995591"
+        }
+      },
+      "iterations": 10
+    }
+  ]
+}
