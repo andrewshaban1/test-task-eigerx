@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 
 import { HttpError } from '../utils/error';
-import { tree } from '../actions';
+import { tree } from '../actionRegistryInit';
 
 export const ExecuteDecistionTree = async (req: Request, res: Response) => {
   const { decisionTree } = req.body;

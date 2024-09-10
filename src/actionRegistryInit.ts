@@ -1,4 +1,4 @@
-import { DecisionTree } from '../decision-tree';
+import { DecisionTree } from './decision-tree';
 
 import {
   ConditionAction,
@@ -10,8 +10,8 @@ import {
   TLoopActionParams,
   TSendEmailActionParams,
   TSendSMSActionParams,
-} from '.';
-import { EActionType } from '../types/action.type';
+} from './actions';
+import { EActionType } from './types/action.type';
 
 const actionRegistry = new ActionRegistry();
 
